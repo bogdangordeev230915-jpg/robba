@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROBBA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login" class="login">
+    <div class="card">
+      <h1>ROBBA</h1>
+      <p class="sub">серый мессенджер</p>
+      <input id="username" placeholder="Твой ник" maxlength="20">
+      <button id="enterBtn">Войти</button>
+    </div>
+  </div>
+
+  <div id="chat" class="chat hidden">
+    <aside class="sidebar">
+      <div class="logo">R</div>
+      <h2>Онлайн</h2>
+      <ul id="userList"></ul>
+    </aside>
+    <main class="main">
+      <header>
+        <span id="me"></span>
+        <button id="logoutBtn">Выйти</button>
+      </header>
+      <div id="messages" class="messages"></div>
+      <form id="form" class="input-bar">
+        <input id="input" placeholder="Сообщение..." autocomplete="off">
+        <button type="submit">→</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
